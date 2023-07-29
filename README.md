@@ -1,6 +1,8 @@
 Установка зависимостей:
 
 poetry install
+ИЛИ
+pip3 install -r requirements.txt
 
 Миграции:
 
