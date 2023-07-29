@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "bboom-test-task"
+version = "0.1.0"
+description = ""
+authors = ["vyual <i@alisoff.ru>"]
+readme = "README.md"
+packages = [{include = "bboom_test_task"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.3"
+djangorestframework = "^3.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

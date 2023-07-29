@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Посты пользователя {{ user.name }}</title>
+</head>
+<body>
+    <h1>Посты пользователя {{ user.name }}</h1>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <strong>{{ post.title }}</strong> - {{ post.body }}
+            <form action="{% url 'post-delete' post.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Удалить</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'post-create' %} ">Создать новый</a>
+</body>
+</html>

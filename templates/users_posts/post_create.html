@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавить новый пост</title>
+</head>
+<body>
+    <h1>Добавить новый пост</h1>
+    <form action="{% url 'post-create' %}" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="title">Заголовок:</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div>
+            <label for="body">Текст:</label>
+            <textarea id="body" name="body" rows="5" required></textarea>
+        </div>
+        <button type="submit">Добавить</button>
+    </form>
+</body>
+</html>
